@@ -1,0 +1,11 @@
+-- Create Database if not exists
+CREATE DATABASE IF NOT EXISTS mysql_crud_db;
+USE mysql_crud_db;
+
+-- Create Users table
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
